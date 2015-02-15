@@ -7,7 +7,7 @@ def read(fname):
 
 
 setup(
-    name="boto_s3_shim",
+    name="boto-s3-shim",
     version="0.0.1",
     author="Graham Christensen",
     author_email="graham@grahamc.com",
@@ -16,7 +16,7 @@ setup(
     license="MIT",
     keywords="boto s3 fakes3",
     url="http://github.com/grahamc/boto_s3_shim",
-    packages=["boto_s3_shim"],
+    packages=["boto-s3-shim"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
