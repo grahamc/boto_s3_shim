@@ -1,6 +1,6 @@
 import os
 import boto
-from urlparse import urlparse
+from urllib.parse import urlparse
 from boto.s3.connection import S3Connection
 from boto.s3.connection import OrdinaryCallingFormat
 
