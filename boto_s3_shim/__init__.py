@@ -3,9 +3,12 @@ from urllib.parse import urlparse
 from boto.s3.connection import S3Connection
 from boto.s3.connection import OrdinaryCallingFormat
 
+def override():
+    override = os.environ.get('S3_OVERRIDE', False)
+    if override:
+        override_with_url(override)
 
-override = os.environ.get('S3_OVERRIDE', False)
-if override:
+def override_with_url(url):
     override_to = urlparse(str(override))
 
     old_init = S3Connection.__init__
@@ -17,4 +20,3 @@ if override:
         old_init(self, *k, **kwargs)
 
     S3Connection.__init__ = new__init__
-
